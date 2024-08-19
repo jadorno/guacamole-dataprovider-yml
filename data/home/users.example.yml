@@ -1,0 +1,23 @@
+---
+users:
+  - username: user1
+    pasword: null
+    connections:
+    - name: connection1
+      protocol: vnc
+      parameters:
+        hostname: 192.168.1.2
+        port: '5900'
+    - name: connection2
+      protocol: vnc
+      parameters:
+        hostname: 192.168.1.3
+        port: '5900'
+  - username: user2
+    pasword: null
+    connections:
+    - name: connection3
+      protocol: vnc
+      parameters:
+        hostname: 192.168.1.4
+        port: '5902'
