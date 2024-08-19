@@ -1,0 +1,13 @@
+{
+
+    "guacamoleVersion" : "1.0.0",
+
+    "name"      : "Guacamole Data Provider",
+    "namespace" : "guacamole-dataprovider-yml",
+
+    "authProviders" : [
+        "com.jadorno.guacamole.MyAuthenticationProvider"
+    ]
+
+}
+
