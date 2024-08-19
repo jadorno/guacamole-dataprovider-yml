@@ -1,0 +1,18 @@
+{
+	"version": "1.0.0",
+	"tasks": [
+		{
+			"label": "maven build jar",
+			"type": "shell",
+			"command": "mvn clean compile assembly:single"
+		},{
+			"label": "guacd -f -L debug",
+			"type": "shell",
+			"command": "/usr/local/sbin/guacd -f -L debug"
+		},{
+			"label": "guac",
+			"type": "shell",
+			"command": "bash .vscode/task-guac.sh"
+		}
+	]
+}

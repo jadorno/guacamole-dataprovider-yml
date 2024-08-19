@@ -1,0 +1,33 @@
+{
+	"name": "guacamole-dataprovider-yml",
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+
+	"customizations": {
+		"codespaces": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"eamodio.gitlens"
+			]
+		},
+		// Add the IDs of extensions you want installed when the container is created.
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"eamodio.gitlens"
+			]
+		},
+		// Set *default* container specific settings.json values on container create.
+		"settings": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8080],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+}
