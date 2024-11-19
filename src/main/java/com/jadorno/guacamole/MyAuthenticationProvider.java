@@ -28,6 +28,7 @@ import org.apache.guacamole.net.auth.User;
 import org.apache.guacamole.net.auth.UserContext;
 import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
 import org.apache.guacamole.protocol.GuacamoleConfiguration;
+import org.mindrot.jbcrypt.BCrypt;
 import org.apache.guacamole.net.auth.AbstractUserContext;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
@@ -46,10 +47,12 @@ public class MyAuthenticationProvider extends AbstractAuthenticationProvider {
         String username = credentials.getUsername(); 
         ParseUser config = getUserData(username);
 
-        if(config == null)
-            return null;
-        else
-            return new MyAuthenticatedUser(credentials, this);
+        if(config != null){
+            if(config.pasword == null || BCrypt.checkpw(credentials.getPassword(), config.pasword)){
+                return new MyAuthenticatedUser(credentials, this);
+            }
+        }
+        return null;
 
     }
 
