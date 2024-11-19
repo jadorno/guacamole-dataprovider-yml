@@ -7,23 +7,12 @@ WORKDIR /tmp
 ENV LDFLAGS -lrt
 
 RUN apt update \
-    && apt install -y build-essential git \
-    libcairo2-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    libtool-bin \
-    uuid-dev \
+    && apt install -y build-essential git libcairo2-dev
+    libjpeg62-turbo-dev libpng-dev libtool-bin uuid-dev \
     libavcodec-dev libavformat-dev libavutil-dev libswscale-dev \
-    freerdp2-dev \
-    libpango1.0-dev \
-    libssh2-1-dev \
-    libtelnet-dev \
-    libvncserver-dev \
-    libwebsockets-dev \
-    libpulse-dev \
-    libssl-dev \
-    libvorbis-dev \
-    libwebp-dev \
+    freerdp2-dev libpango1.0-dev libssh2-1-dev libtelnet-dev \
+    libvncserver-dev libwebsockets-dev libpulse-dev libssl-dev \
+    libvorbis-dev libwebp-dev apache2-utils \
     && git clone --depth 1 --branch 1.5.4 https://github.com/apache/guacamole-server.git \
     && cd /tmp/guacamole-server \
     && autoreconf -fi \
