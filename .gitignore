@@ -334,3 +334,4 @@ ASALocalRun/
 target
 data/home/extensions/data-provider.jar
 data/home/users.yml
+.mvn/repository
