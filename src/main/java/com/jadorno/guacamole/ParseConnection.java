@@ -6,4 +6,6 @@ public class ParseConnection {
     public String name;
     public String protocol;
     public Map<String, String> parameters;
+    public Map<String, String> attributes;
+
 }
